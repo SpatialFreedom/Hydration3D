@@ -24,14 +24,14 @@ is more than sufficient for most 3D applications apart from Computer
 Aided Design apps.
 
 Simple 3D Coordinate Compression is conceptually described by four steps:
-    1. Take any set of single or double precision 3D coordinates.
-    2. Find the x, y and z extents.
-    3. Calculate the transformation matrix, using the extents, to translate
+1. Take any set of single or double precision 3D coordinates.
+2. Find the x, y and z extents.
+3. Calculate the transformation matrix, using the extents, to translate
        and scale the whole set of coordinate into the range [1.0 .. 2.0)
        where "[1.0" is inclusive of 1.0 and "2.0)" is exclusive of 2.0.
        Store the three translation and one (or three) scale values to be used
        when reversing this transformation.
-    4. All values are positive and all exponents are exactly the same so pack
+4. All values are positive and all exponents are exactly the same so pack
        the mantissas together and throw away the sign bit and the exponents
        - voila!
 
